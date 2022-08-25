@@ -1,0 +1,26 @@
+#selenium框架配置
+SeleniumConfig:
+  ImplicitWait: 10   #隐式等待时间, 单位: s(秒)
+
+
+#测试配置
+TestConfig:
+  BrowserType: chrome
+  TestURL: https://www.baidu.com
+
+# chrome浏览器启动参数设置
+ChromeOptions:
+  incognito: false   #是否启用无恒模式
+  –disable-javascrip: false  #是否禁用JavaScript
+  --user-agent: null  #是否设置浏览器标识, 如果设置直接填写对应文本
+  -disable-plugins: false  #是否禁止加载所有插件, 为true可以增加加载速度
+  -start-maximized: false  #浏览器启动时是否最大化
+  --lang: zh-CN  #浏览器语言设置, 当前为中文简体
+  blink-settings=imagesEnabled: false  #是否禁止加载图片
+  --headless: false  #是否进行无界面测试
+  --no-sandbox: true  #是否取消沙河模式运行
+  --proxy-server: null #浏览器设置代理, 最好使用无账号密码的代理地址 例: http://127.0.0.1:7890
+  window-size: null  #指定浏览器大小 例: 1920x1080
+  pass-save: false  #是否阻止弹出保存密码的弹框
+  disable-infobars: true  #是否禁止浏览器显示正在被自动化程序控制的提示
+
